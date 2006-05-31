@@ -1,0 +1,13 @@
+MANIFEST			This list of files
+README                          General information, installation, etc.
+Makefile.PL                    
+lib/Template/Latex.pm
+lib/Template/Plugin/Latex.pm
+t/latex.t
+t/latex2dvi.t
+t/latex2pdf.t
+t/latex2ps.t
+t/plugin.t
+t/output.t
+t/output/README
+META.yml                                 Module meta-data (added by MakeMaker)
