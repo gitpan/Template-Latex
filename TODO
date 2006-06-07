@@ -1,0 +1,34 @@
+#================================================== -*- indented-text -*-
+#
+# TODO
+#
+# DESCRIPTION
+#   TODO list for the Template Latex plugin version 2.17, containing
+#   known bugs, limitations, planned enhancements, long term visions 
+#   and a few whacky ideas.
+#
+# AUTHOR
+#   Andrew Ford   <a.ford@ford-mason.co.uk>
+#
+#------------------------------------------------------------------------
+# $Id: TODO 14 2006-06-07 14:34:29Z ford $
+#========================================================================
+
+#------------------------------------------------------------------------
+# Miscellaneous
+#------------------------------------------------------------------------
+
+* re-run latex (or pdflatex) if the document contains undefined
+  references after the first run.  It will run bibtex if it undefined
+  citations are reported, and will run makeindex if it detects a
+  ".idx" file.  If bibtex or makeindex are run then latex (or
+  pdflatex) are run up to three more times to allow forward references
+  to stabilize.
+
+  Note that the latex filter runs up to eight external programs, so it
+  isn't very fast.  But for modest documents the performance is
+  adequate, even for interactive applications.
+
+* review the security implications of allowing templates to specify
+  program paths for latex, pdflatex and dvips.
+

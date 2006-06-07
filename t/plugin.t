@@ -24,7 +24,27 @@ my $ttcfg = {
     }
 };
 
-test_expect(\*DATA, $ttcfg);
+# Read in the tests from the DATA section and add a test to check that
+# the latex filter isn't installed if we the plugin is not loaded.
+# The test is not added if the TT2 version is less than 2.16 as up to
+# that point the latex filter was included in Template::Filters.
+
+my $tests = join '', <DATA>;
+
+if ($Template::VERSION > 2.15) {
+    $tests = join "\n", ("-- test --",
+			 "[% TRY; ",
+			 "     hello | latex;",
+			 "   CATCH undef;",
+			 "     error;",
+			 "   END",
+			 "-%]",
+			 "-- expect --",
+			 "undef error - latex: filter not found",
+			 $tests);
+}
+
+test_expect($tests, $ttcfg);
 
 
 # Grab just the first $len bytes of the input, and optionally convert
@@ -44,20 +64,6 @@ sub head_factory {
 
 __END__
 
-#------------------------------------------------------------------------
-# check that the latex filter isn't install if we don't load the plug
-#------------------------------------------------------------------------
-
--- test --
-[% TRY; 
-     hello | latex;
-   CATCH undef;
-     error;
-   END
--%]
--- expect --
-undef error - latex: filter not found
-  
 -- test -- 
 [[% USE Latex %]]
 -- expect --

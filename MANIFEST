@@ -1,5 +1,7 @@
 MANIFEST			This list of files
 README                          General information, installation, etc.
+Changes
+TODO
 Makefile.PL                    
 lib/Template/Latex.pm
 lib/Template/Plugin/Latex.pm

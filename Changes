@@ -1,0 +1,31 @@
+#================================================= -*- indented-text -*-
+#
+# Changes 
+#
+# DESCRIPTION
+#   Revision history for the Template Toolkit Latex plugin.
+#
+# AUTHOR
+#   Andrew Ford   <A.Ford@ford-mason.co.uk>
+#
+#
+#------------------------------------------------------------------------
+# $Id: Changes 18 2006-06-07 15:43:28Z ford $
+#========================================================================
+
+#------------------------------------------------------------------------
+# Version 2.17 - 2006-06-07
+#------------------------------------------------------------------------
+
+* Changes dependency on Template to version 2.15 as version 2.16 of
+  Template, which was specified as the dependency has not been relased.
+
+* Added files: Changes (this file) and TODO
+
+
+#------------------------------------------------------------------------
+# Version 2.16 - 2006-05-31
+#------------------------------------------------------------------------
+
+First release of the plugin as a separate distribution to the core
+Template Toolkit distribution.  New maintainer: Andrew Ford.

@@ -56,7 +56,7 @@ my %opts = (
     'VERSION_FROM' => 'lib/Template/Latex.pm',
     'PMLIBDIRS'    => [ 'lib' ], 
     'PREREQ_PM'    => { 
-        'Template'    => 2.16,
+        'Template'    => 2.15,
     },
     'dist'         => {
         'COMPRESS' => 'gzip',

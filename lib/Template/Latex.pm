@@ -32,7 +32,7 @@ use File::Path;
 use File::Spec;
 use Cwd;
 
-our $VERSION  = 2.16;
+our $VERSION  = 2.17;
 our $DEBUG    = 0 unless defined $DEBUG;
 our $ERROR    = '';
 our $FILTER   = 'latex';        # default filter name
